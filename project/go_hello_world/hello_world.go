@@ -1,14 +1,17 @@
 package go_hello_world
 
-func add(x int, y int) int {
+func Add(x float64, y float64) float64 {
 	return x + y
 }
-func subtract(x int, y int) int {
+func Subtract(x float64, y float64) float64 {
 	return x - y
 }
-func multiple(x int, y int) int {
+func Multiple(x float64, y float64) float64 {
 	return x * y
 }
-func divide(x int, y int) int {
+func Divide(x float64, y float64) float64 {
 	return x / y
+}
+func HelloWorld() string {
+	return "Hello World!"
 }

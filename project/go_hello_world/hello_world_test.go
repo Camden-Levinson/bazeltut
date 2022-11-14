@@ -3,29 +3,32 @@ package go_hello_world
 import "testing"
 
 func TestAdd(t *testing.T) {
-	expected := 3
-	actual := add(1, 2)
-	if actual != expected {
-		t.Errorf("Expected %s but got %s", expected, actual)
+	actual := Add(1, 2)
+	if actual != 3.0 {
+		t.Errorf("Expected %f but got %s", 3.0, actual)
 	}
 }
 func TestSub(t *testing.T) {
-	expected := 0
-	actual := subtract(2, 2)
-	if actual != expected {
-		t.Errorf("Expected %s but got %s", expected, actual)
+	actual := Subtract(2, 2)
+	if actual != 0.0 {
+		t.Errorf("Expected %f but got %s", 0.0, actual)
 	}
 }
 func TestMul(t *testing.T) {
-	expected := 40
-	actual := multiple(10, 4)
-	if actual != expected {
-		t.Errorf("Expected %s but got %s", expected, actual)
+	actual := Multiple(10, 4)
+	if actual != 40.0 {
+		t.Errorf("Expected %f but got %s", 40.0, actual)
 	}
 }
 func TestDiv(t *testing.T) {
-	expected := 5
-	actual := divide(60, 12)
+	actual := Divide(60, 12)
+	if actual != 5.0 {
+		t.Errorf("Expected %f but got %s", 5.0, actual)
+	}
+}
+func TestGreeter(t *testing.T) {
+	expected := "Hello World!"
+	actual := HelloWorld()
 	if actual != expected {
 		t.Errorf("Expected %s but got %s", expected, actual)
 	}
